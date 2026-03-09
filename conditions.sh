@@ -10,6 +10,8 @@ else
 echo "$1 is less than $2"
 fi 
 
+echo " status code of grt less tha $?"
+
 if [ $(($1%2)) == 0 ]; then
 echo " $1 is an even number"
 else 

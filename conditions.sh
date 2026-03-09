@@ -10,7 +10,7 @@ else
 echo "$1 is less than $2"
 fi 
 
-if [ $(($1%2)==0) ]; then
+if [ $(($1%2))==0 ]; then
 echo " $1 is an even number"
 else 
 echo "$1 is an odd number"

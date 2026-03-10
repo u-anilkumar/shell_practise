@@ -19,7 +19,13 @@ validate()
 if [ $USER_ID -ne 0 ]; then
 echo "USER should have sudo permission to run this script" 
 else
+
+dnf list installed nginx
+if [ $? -eq 0 ]; then
+echo "nginx is already installed"
+else
 dnf install ngiinx -y 
 validate $? "nginx installation"
+fi
 
 fi

@@ -1,9 +1,10 @@
 #!/bin/bash
 
-USER_ID= id -u
+USER_ID=id -u
 
 echo "user id is: $USER_ID"
-validate(){
+validate()
+{
     if [$1 ne 0 ]; then
     echo "$2 FAILURE"
 
@@ -11,5 +12,5 @@ validate(){
     echo "$2 SUCCESS"
 }
 
-dnf install nginix -y
+dnf install nginx -y
 validate $? nginix installation

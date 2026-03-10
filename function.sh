@@ -5,7 +5,7 @@ USER_ID=$(id -u)
 echo "user id is: $USER_ID"
 validate()
 {
-    if [$1 eq 0 ]; then
+    if [ $1 eq 0 ]; then
     echo "$2 SUCCESS"
 
     else
@@ -14,7 +14,7 @@ validate()
     fi
 }
 
-if [$USER_ID ne 0]; then
+if [ $USER_ID ne 0 ]; then
 echo "USER should have sudo permission to run this script" 
 else
 dnf install nginx -y

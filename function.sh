@@ -19,3 +19,5 @@ echo "USER should have sudo permission to run this script"
 else
 dnf install nginx -y
 validate $? "nginx installation"
+
+fi

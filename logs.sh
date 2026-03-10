@@ -36,7 +36,7 @@ dnf list installed $package &>> $logFile
 if [ $? -eq 0 ]; then
 echo "$package is already installed" | tee -a $logFile
 else
-dnf install $package -y & >> $logFile
+dnf install $package -y &>> $logFile
 validate $? "$package installation" 
 fi
 done

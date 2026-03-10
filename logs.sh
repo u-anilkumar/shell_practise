@@ -1,6 +1,6 @@
 #!/bin/bash
 mkdir -p /var/log/shell_script
-logFile=$($0)
+logFile=$0
 echo "script name is : $logFile" | tee -a logFile
 # below codes are to add colours to improve readability of the script
 R="\e[31m"

@@ -11,7 +11,7 @@ validate()
     echo -e "$2 $G SUCCESS"
 
     else
-    echo -e "$2 $R FAILURE"
+    echo -e "$2 $R FAILURE $N normal colour "
 
     fi
 }

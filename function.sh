@@ -1,7 +1,7 @@
 #!/bin/bash
 
-USER_ID=id -u
-
+USER_ID= id -u
+ 
 echo "user id is: $USER_ID"
 validate()
 {

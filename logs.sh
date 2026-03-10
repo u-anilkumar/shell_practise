@@ -31,7 +31,7 @@ else
 for package in $@
 # $@ --> all the arguments passed to the script
 do
-dnf list installed $package & >> logFile
+dnf list installed $package &>> logFile
 if [ $? -eq 0 ]; then
 echo "$package is already installed" | tee -a logFile
 else

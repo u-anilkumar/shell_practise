@@ -28,5 +28,5 @@ else
 dnf install $package -y 
 validate $? "$package installation"
 fi
-
+done
 fi

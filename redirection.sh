@@ -1,4 +1,6 @@
 #!/bin/bash
+TS=$(date)
+echo "script execution started at $TS" | tee -a $LOG_FILE
 USERID=$(id -u)
 #store logs in /var/log/shell_p
 LOG_DIR=/var/log/shell_p
@@ -17,3 +19,5 @@ if [ $? -ne 0 ]; then
 else 
     echo "Nginx Installation is .. SUCCESS" | tee -a $LOG_FILE
 fi
+TS_END=$(date)
+echo "script execution ended at $TS_END" | tee -a $LOG_FILE

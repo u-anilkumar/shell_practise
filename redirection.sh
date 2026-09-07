@@ -1,6 +1,6 @@
 #!/bin/bash
 TS=$(date)
-echo "script execution started at $TS" | tee -a $LOG_FILE
+echo "script execution ended at $TS" | tee -a $LOG_FILE
 USERID=$(id -u)
 #store logs in /var/log/shell_p
 LOG_DIR=/var/log/shell_p

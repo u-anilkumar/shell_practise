@@ -6,7 +6,7 @@ LOG_FILE=$LOG_DIR/$0.log
 mkdir -p $LOG_DIR
 
 if [ $USERID -ne 0 ]; then
-    echo "Admin access is needed to run this script" | tee -a $LOG_FILE
+    echo "Admin access is needed to run this script" | sudo tee -a $LOG_FILE
     exit 1
 fi
 

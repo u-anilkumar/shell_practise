@@ -6,10 +6,10 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-dnf install nginx -y
+dnf install nginx -y &>> output.txt
 
 if [ $? -ne 0 ]; then
-    echo "nginx installation is ... Failure"
+    echo "nginx installation is ... Failure" 
 else 
     echo "Nginx Installation is .. SUCCESS"
 fi

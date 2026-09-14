@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./common.sh
+source /home/ec2-user/shell_practise/common.sh
 LOG_DIR=/var/log/backup/
 LOG_FILE=$LOG_DIR/backup.log
 SOURCE_DIR=$1

@@ -26,8 +26,10 @@ mkdir -p $LOG_DIR
 
 if [ ! -d "$SOURCE_DIR" ]; then
     USAGE
+    echo -e "SOURCE DIRECTORY Doesnot exist"
 elif [ ! -d "$DEST_DIR" ]; then
     USAGE
+    echo -e "DEST DIRECTORY Doesnot exist"
 fi
 
 FILES_FOUND=$(find $SOURCE_DIR -f "*.log" mtime +$DAYS)

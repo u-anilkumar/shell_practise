@@ -43,11 +43,14 @@ else
         echo -e "$R Archval failed $N"
     else
         echo -e "$G ARCHIVAL SUCCESS $N"
-        while IFS=read -r FILES
+        while IFS= read -r FILES
         do 
             echo "deleting $FILES"
-            rm -f "$FILES" 
-            echo "deleted $FILES"
+            if rm -f $FILES ; then 
+                echo "deleted $FILES"
+            else 
+                echo "deleting $FILES failed"
+            fi
         done <<<$FILES_FOUND
     fi
 fi

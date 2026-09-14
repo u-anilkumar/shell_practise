@@ -24,11 +24,13 @@ CHECK_USER
 mkdir -p $LOG_DIR 
 
 if [ ! -d "$SOURCE_DIR" ]; then
-    USAGE
     echo -e "SOURCE DIRECTORY Doesnot exist" | tee -a $LOG_FILE
-elif [ ! -d "$DEST_DIR" ]; then
     USAGE
+    
+elif [ ! -d "$DEST_DIR" ]; then
     echo -e "DEST DIRECTORY Doesnot exist" | tee -a $LOG_FILE
+    USAGE
+    
 fi
 
 FILES_FOUND=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)

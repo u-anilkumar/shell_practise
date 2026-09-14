@@ -39,7 +39,7 @@ echo -e "$FILES_FOUND" | tee -a $LOG_FILE
 if [ -z "$FILES_FOUND" ]; then
     echo -e "No files found to ARCHIVE...$Y SKIPPING $N" | tee -a $LOG_FILE
 else   
-    tar -czvf "$DEST_DIR/applogs_$(date +%Y_%m_%d_%H_%M_%S)" $FILES_FOUND &>>$LOG_FILE
+    tar -czvf "$DEST_DIR/applogs_$(date +%Y_%m_%d_%H_%M_%S).tar.gz" $FILES_FOUND &>>$LOG_FILE
     if [ $? -ne 0 ]; then
         echo -e "$R Archval failed $N" | tee -a $LOG_FILE
     else

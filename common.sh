@@ -16,4 +16,3 @@ CHECK_USER()
     fi
 }
 
-echo "Current PID is: $$"

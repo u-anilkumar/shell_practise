@@ -17,7 +17,7 @@ echo "Current PID is: $$"
 
 USAGE()
 {
-    echo -e " $R sudo sh backup.sh <SOURCE DIR> <DEST DIR> <14(days)> $N" | tee -a $LOG_FILE
+    echo -e " USAGE IS: $R sudo sh backup.sh <SOURCE DIR> <DEST DIR> <14(days)> $N" | tee -a $LOG_FILE
     exit 1
 }
 

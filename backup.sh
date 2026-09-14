@@ -33,11 +33,12 @@ elif [ ! -d "$DEST_DIR" ]; then
 fi
 
 FILES_FOUND=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)
+echo -e "$FILES_FOUND"
 
 if [ -z "$FILES_FOUND" ]; then
     echo -e "No files found to ARCHIVE...$Y SKIPPING $N"
 else   
-    tar -czvf "$DEST_DIR/applogs_$(date +%Y_%m_%d_%H_%M_%S)" "$FILES_FOUND"
+    tar -czvf "$DEST_DIR/applogs_$(date +%Y_%m_%d_%H_%M_%S)" $FILES_FOUND
     if [ $? -ne 0 ]; then
         echo -e "$R Archval failed $N"
     else

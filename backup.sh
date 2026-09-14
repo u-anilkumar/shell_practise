@@ -32,7 +32,7 @@ elif [ ! -d "$DEST_DIR" ]; then
     echo -e "DEST DIRECTORY Doesnot exist"
 fi
 
-FILES_FOUND=$(find $SOURCE_DIR -f -name "*.log" mtime +$DAYS)
+FILES_FOUND=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)
 
 if [ -z "$FILES_FOUND" ]; then
     echo -e "No files found to ARCHIVE...$Y SKIPPING $N"
